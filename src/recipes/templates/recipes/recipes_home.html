@@ -1,7 +1,18 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html>
   <title>Recipes Home</title>
   <body>
-    Welcome to our Recipes website.
+    <h1 style="text-align: center">Welcome to our recipes website.</h1>
+    <br />
+
+    <img
+      src="{% static 'recipes/images/recipes_main-picture.jpg' %}"
+      alt="home"
+      width="600"
+      height="300"
+      style="margin: auto; display: block"
+    />
   </body>
 </html>
