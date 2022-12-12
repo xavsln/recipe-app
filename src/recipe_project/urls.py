@@ -21,10 +21,15 @@ from django.urls import include
 from django.conf import settings
 from django.conf.urls.static import static
 
+from .views import login_view, logout_view, success_view
+
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', include('recipes.urls', namespace='main')),
-    path('recipes/', include('recipes.urls', namespace='recipes-list'))
+    path('recipes/', include('recipes.urls', namespace='recipes-list')),
+    path('login/', login_view, name='login'),
+    path('logout/', logout_view, name='logout'),
+    path('success/', success_view, name='success'),
 ]
 
 urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
