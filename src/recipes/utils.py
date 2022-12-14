@@ -48,20 +48,23 @@ def get_chart(chart_type, data, **kwargs):
 
   #select chart_type based on user input from the form
   if chart_type == '#1':
-      #plot bar chart between date on x-axis and quantity on y-axis
-      plt.bar(data['date_created'], data['quantity'])
+    #plot bar chart between date on x-axis and quantity on y-axis
+    plt.bar(data['name'], data['preparation_time'])
+    plt.title("- Preparation time per recipe -")
 
   elif chart_type == '#2':
-      #generate pie chart based on the price.
-      #The book titles are sent from the view as labels
-      labels=kwargs.get('labels')
-      plt.pie(data['price'], labels=labels)
+    #generate pie chart based on the price.
+    #The recipes titles are sent from the view as labels
+    # labels=kwargs.get('labels')
+    plt.pie(data['serving'], labels=data['name'])
+    plt.title("Serving depending on the recipe")
 
   elif chart_type == '#3':
-      #plot line chart based on date on x-axis and price on y-axis
-      plt.plot(data['date_created'], data['price'])
+    #plot line chart based on date on x-axis and price on y-axis
+    plt.plot(data['name'], data['cooking_time'])
+    plt.title("- Cooking time per recipe -")
   else:
-      print ('unknown chart type')
+    print ('unknown chart type')
 
   #specify layout details
   plt.tight_layout()

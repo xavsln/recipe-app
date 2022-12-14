@@ -7,6 +7,8 @@ CHART__CHOICES = (          #specify choices as a tuple
   )
 #define class-based Form imported from Django forms
 class RecipesSearchForm(forms.Form): 
-  recipe_title= forms.CharField(max_length=120)
+  # recipe_title= forms.CharField(max_length=120)
+  recipe_category= forms.CharField(max_length=120)
   chart_type = forms.ChoiceField(choices=CHART__CHOICES)
+  
 
