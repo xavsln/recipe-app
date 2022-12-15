@@ -1,6 +1,8 @@
 from django.test import TestCase
 from .models import Recipe  #to access Recipe model
 
+from .forms import RecipesSearchForm
+
 # Create your tests here.
 class RecipeModelTest(TestCase):
 
@@ -66,4 +68,6 @@ class RecipeModelTest(TestCase):
     #and load the URL /recipes/list/1
     self.assertEqual(recipe.get_absolute_url(), '/recipes/list/1')
 
-    
+  def test_form_validation_with_valid_data(self):
+    form = RecipesSearchForm({'recipe_category': 'dessert', 'chart_type': '#1'})
+    self.assertTrue(form.is_valid())
