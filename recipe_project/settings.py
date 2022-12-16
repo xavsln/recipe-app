@@ -22,14 +22,14 @@ IS_HEROKU = "DYNO" in os.environ
 # See https://docs.djangoproject.com/en/4.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-d2mn-z^xt(em-ur9c$6d2!a_m@$m2xef#0sm(zzgzeh8va)a8t')
+SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY','django-insecure-ml49cp(e)=yakpevh4xz)3w)6xuq6kv7g&3^xf^)gr-n3&p#%9')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 if not IS_HEROKU:
     DEBUG = True
 
 if IS_HEROKU:
-    ALLOWED_HOSTS = []
+    ALLOWED_HOSTS = ['stark-retreat-72788.herokuapp.com']
 else:
     ALLOWED_HOSTS = []
 
