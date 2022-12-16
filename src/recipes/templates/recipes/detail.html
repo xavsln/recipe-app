@@ -1,21 +1,37 @@
-<h2>Details: {{object.name}}</h2>
+{% load static %}
 
-<b>Name: </b> {{object.name}} <br />
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <title>Recipes details</title>
+</head>
 
-<b>Category: </b> {{object.category}} <br />
+<nav class="navMenu">
+  <a href="{%url 'welcome' %}">Home</a>
+  <a href="{%url 'recipes-list:list' %}">Recipes' list</a>
+  <a href="{%url 'recipes-list:records' %}">Search</a>
+  <a href="{%url 'about' %}">About</a>
+</nav>
 
-<b>Preparation time: </b> {{object.preparation_time}} <br />
+<div class="main-content">
+  <h2>Details: {{object.name}}</h2>
 
-<b>Cooking time: </b> {{object.cooking_time}} <br />
+  <b>Name: </b> {{object.name}} <br />
 
-<b>Difficulty: </b> {{object.difficulty}} <br />
+  <b>Category: </b> {{object.category}} <br />
 
-<b>Ingredients: </b> {{object.ingredients}} <br />
+  <b>Preparation time: </b> {{object.preparation_time}} <br />
 
-<b>Diretions: </b> {{object.directions}} <br />
+  <b>Cooking time: </b> {{object.cooking_time}} <br />
 
-<b>Notes: </b> {{object.notes}} <br />
+  <b>Difficulty: </b> {{object.difficulty}} <br />
 
-<br />
+  <b>Ingredients: </b> {{object.ingredients}} <br />
 
-<img src="{{object.pic.url}}" width="200" height="300" />
+  <b>Diretions: </b> {{object.directions}} <br />
+
+  <b>Notes: </b> {{object.notes}} <br />
+
+  <br />
+
+  <img src="{{object.pic.url}}" width="200" height="300" />
+</div>

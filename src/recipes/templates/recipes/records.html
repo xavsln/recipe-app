@@ -1,20 +1,41 @@
-<h1>Search for recipes records</h1>
+{% load static %}
 
-<hr />
-<form action="" method="POST">
-  {% csrf_token %} 
-  {{form}}
-  <button type="submit">search</button>
-</form>
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <title>Recipes records search</title>
+</head>
 
-<br>
+<nav class="navMenu">
+  <a href="{%url 'welcome' %}">Home</a>
+  <a href="{%url 'recipes-list:list' %}">Recipes' list</a>
+  <a href="{%url 'recipes-list:records' %}">Search</a>
+  <a href="{%url 'about' %}">About</a>
+  <a href="{%url 'logout' %}">Logout</a>
+</nav>
 
-{% if recipes_df %}
-  {{recipes_df|safe}}
+<body>
+  <div class="main-content">
+    <h1>Search for recipes records</h1>
 
-<br>
-<img src="data:image/png;base64, {{chart|safe}}">
+    <hr />
+    <form action="" method="POST" class="search-form">
+      {% csrf_token %} 
+      {{form}}
+      <button type="submit">search</button>
+    </form>
 
-{% else %}
-  <h3> no data</h3>
-{% endif %}
+    <br>
+
+    {% if recipes_df %}
+      {{recipes_df|safe}}
+
+    <br>
+    <img src="data:image/png;base64, {{chart|safe}}">
+
+    {% else %}
+      <h3> no data</h3>
+    {% endif %} 
+  </div>
+</body>
+
+

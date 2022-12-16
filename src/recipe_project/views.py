@@ -46,3 +46,9 @@ def logout_view(request):
 
 def success_view(request):
   return render(request, 'auth/success.html')
+
+def welcome_view(request):
+  return render(request, 'recipes_home.html')
+
+def about_view(request):
+  return render(request, 'about.html')

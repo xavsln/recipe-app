@@ -2,8 +2,18 @@
 
 <!DOCTYPE html>
 <html>
-  <title>Recipes Home</title>
+  <head>
+    <link rel="stylesheet" href="static/style.css" />
+    <title>Recipes Home</title>
+  </head>
+
   <body>
+    <nav class="navMenu">
+      <a href="{%url 'welcome' %}">Home</a>
+      <a href="{%url 'recipes-list:list' %}">Recipes' list</a>
+      <a href="{%url 'recipes-list:records' %}">Search</a>
+      <a href="{%url 'about' %}">About</a>
+    </nav>
     <h1 style="text-align: center">Welcome to our recipes website.</h1>
     <br />
 

@@ -1,0 +1,21 @@
+{% load static %}
+
+<head>
+  <link rel="stylesheet" href="{% static 'style.css' %}" />
+  <title>About page</title>
+</head>
+
+<nav class="navMenu">
+  <a href="{%url 'welcome' %}">Home</a>
+  <a href="{%url 'recipes-list:list' %}">Recipes' list</a>
+  <a href="{%url 'recipes-list:records' %}">Search</a>
+  <a href="{%url 'about' %}">About</a>
+</nav>
+
+<div class="main-content">
+  <p>Hello! I am a web developer.</p>
+  <p>
+    You can find my webpage
+    <a href="https://xavier.efabriko.dev/index.html" target="_blank">here</a>
+  </p>
+</div>
