@@ -41,7 +41,8 @@
           {% comment%} add links to book names {% endcomment%} {{object.name}}
         </a>
       </td>
-      <td><img src="{{object.pic.url}}" width="150" height="200" /></td>
+      <td><img src="{{object.pic_url}}" width="150" /></td>
+
       <td>{{object.difficulty}}</td>
     </tr>
     {% endfor %}

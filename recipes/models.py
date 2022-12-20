@@ -32,7 +32,9 @@ class Recipe(models.Model):
 
   notes = models.CharField(max_length=240)
 
-  pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
+  # pic = models.ImageField(upload_to='recipes', default='no_picture.jpg')
+
+  pic_url = models.URLField(default='https://upload.wikimedia.org/wikipedia/commons/6/65/No-Image-Placeholder.svg')
 
   def __str__(self):
     return str(self.name)
