@@ -73,9 +73,9 @@ def records(request):
     print ('Case 4: Output of qs.values_list()')
     print (qs.values_list())
 
-    print ('Case 5: Output of Sale.objects.get(id=1)')
-    obj = Recipe.objects.get(id=1)
-    print (obj)
+    # print ('Case 5: Output of Sale.objects.get(id=1)')
+    # obj = Recipe.objects.get(id=1)
+    # print (obj)
 
 
     #apply filter to extract data
