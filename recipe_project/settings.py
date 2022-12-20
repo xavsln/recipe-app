@@ -29,6 +29,9 @@ if not IS_HEROKU:
     DEBUG = True
 
 if IS_HEROKU:
+    DEBUG = True
+
+if IS_HEROKU:
     ALLOWED_HOSTS = ['stark-retreat-72788.herokuapp.com']
 else:
     ALLOWED_HOSTS = []
